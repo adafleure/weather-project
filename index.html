@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,7 +13,7 @@
       crossorigin="anonymous"
     />
     <script src="https://kit.fontawesome.com/97ef79beee.js" crossorigin="anonymous"></script>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="src/style.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,43 +26,35 @@
       href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&display=swap"
       rel="stylesheet"
     />
+    <link href="src/index.js" rel="stylesheet" type="text/js" />
   </head>
   <body>
-    <script>
-      let name=prompt("What is your name?");
-      if (prompt=" "){
-        alert("Bad for you!");
-      }
-      else{ alert("Welcome, "+ name);}
-
-    </script>
     <div class="main">
-         <img src="icon.svg" alt="" class="icon" />
              <div class="form-group"><form>
                 <input
                   type="search"
                   aria-describedby="searchcity"
                   placeholder="Enter your city"
-                  width="200px"
+                  width="200px" class="searchInput"
                 />
                 </form>
                 </div>
-           <div class="buttons"> <button>
+           <div class="buttons"> <button id="searchButton">
               Search
             </button>
-            <button>
-              Current
+            <button id="gpsbutton">
+              Current location
             </button>
             </div>
       <p class="date">
-        Vienna <br />
-        Thursday, 2/6/2022, 15:31
+        <span id="city">Vienna</span> <br />
+        <span id="date">Thursday, 2/6/2022, 15:31 </span>
       </p>
-     <div class="container1">
-      <div class="left"><h3>Now: rainy</h3></div>
-<div class="center"><img src="rainicon.svg" alt="" class="sign" /></div>
-      <div class="temp right"><div class="percent"><p class="degree">24 &#8451</p></div></div>
-      </div>
+
+      <h3>Now: rainy</h3>
+      <img src="src/rainicon.svg" alt="" class="sign" />
+      <div class="temp"><div class="percent"><p class="degree"><span class="degrees">24</span> &#8451</p></div></div>
+      <img src="src/icon.svg" alt="" class="icon" />
       <p class="quote">Grab a cup of tea, watch Harry Potter and have a cozy rainy evening <i class="fa-solid fa-mug-hot"></i></p>
       <div class="container">
         <div class="row">
