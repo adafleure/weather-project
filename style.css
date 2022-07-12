@@ -120,6 +120,6 @@ h3 {
   font-size: 30px;
 }
 .container {
-  text-align: center;
+  text-align:center;
   text-shadow: 2px 2px 20px rgba(68, 62, 63, 0.089);
 }
