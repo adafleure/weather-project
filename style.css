@@ -14,7 +14,7 @@ body {
   background-color: rgb(255, 248, 241);
 }
 form {
-  color: #fcc5a7;
+  color: #b88d76;
 }
 .date {
   position: relative;
@@ -39,6 +39,14 @@ input:focus {
   left: 730px;
   top: 170px;
 }
+#icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  bottom: 40px;
+  width: 300px;
+}
 button {
   border-radius: 10px;
   border-style: dashed;
@@ -50,63 +58,30 @@ button {
 button:hover {
   border-style: solid;
 }
-.quote {
-  position: relative;
-  bottom: 30px;
-  left: 200px;
-  font-weight: bolder;
-  margin: 15px 0px 5px 0px;
-}
-.quote i {
-  color: #fcc5a7;
-  text-shadow: 2px 2px 20px rgba(68, 62, 63, 0.089);
-}
-.icon {
+#head {
+  width: 100px;
   position: fixed;
-  right: 320px;
-  top: 19px;
-  width: 150px;
+  left: 1180px;
+  top: 76px;
 }
 h3 {
-  position: relative;
-  left: 120px;
-  top: 87px;
   text-shadow: 0px 0px 0.6px rgba(68, 62, 63, 0.517);
-  color: #fcc5a7;
+  color: #725d52;
   font-weight: bolder;
+  font-size: 20px;
 }
-.sign {
-  width: 200px;
-  box-shadow: 1px 1px 20px rgba(68, 63, 64, 0.055);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.details {
+  position: relative;
+  top: 140px;
+  left: 90px;
 }
 .temp {
   position: relative;
   left: 620px;
-  bottom: 100px;
-  width: 250px;
-  height: 30px;
-  background-color: #f1f1f1;
-  border-color: transparent;
-  border-radius: 20px;
-  box-shadow: 2px 2px 20px rgba(68, 62, 63, 0.26);
-}
-.percent {
-  width: 70%;
-  color: white;
-  background-color: #ffd0b6;
-  height: 30px;
-  border-color: transparent;
-  border-radius: 20px;
-}
-.degree {
-  position: relative;
-  top: 1px;
-  left: 178px;
-  color: black;
-  font-size: larger;
+  bottom: 220px;
+  font-size: 32px;
+  color: #725d52;
+  font-weight: bolder;
 }
 .celsius:hover,
 .fahrenheit:hover {
@@ -115,11 +90,12 @@ h3 {
 }
 .container i {
   margin-top: 10px;
-
   color: #fcc5a7;
   font-size: 30px;
 }
 .container {
-  text-align:center;
+  position: relative;
+  bottom: 50px;
+  text-align: center;
   text-shadow: 2px 2px 20px rgba(68, 62, 63, 0.089);
 }
