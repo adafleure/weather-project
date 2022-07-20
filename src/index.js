@@ -60,12 +60,13 @@ function displayImage(icon) {
 
   return iconPath;
 }
-
+let celsiusTemperature = null;
 let cities = document.querySelector("#city");
 function showTemperature(response) {
   document.querySelector(".degrees").innerHTML = Math.round(
     response.data.main.temp
   );
+  celsiusTemperature = Math.round(response.data.main.temp);
   const description = document.querySelector(".description");
   description.innerHTML = response.data.weather[0].main;
   const humidity = document.querySelector(".humidity");
@@ -101,6 +102,7 @@ function showWeather(response) {
   document.querySelector(".degrees").innerHTML = Math.round(
     response.data.main.temp
   );
+  celsiusTemperature = Math.round(response.data.main.temp);
   const description = document.querySelector(".description");
   description.innerHTML = response.data.weather[0].main;
   const humidity = document.querySelector(".humidity");
@@ -123,3 +125,25 @@ function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(currentPosition);
 }
 gpsButton.addEventListener("click", getCurrentPosition);
+
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".degrees");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+function convertToCelsius(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector(".degrees");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
