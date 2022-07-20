@@ -69,10 +69,10 @@ function showTemperature(response) {
   celsiusTemperature = Math.round(response.data.main.temp);
   const description = document.querySelector(".description");
   description.innerHTML = response.data.weather[0].main;
-  const humidity = document.querySelector(".humidity");
-  humidity.innerHTML = response.data.main.humidity;
+ const humidity = document.querySelector(".humidity");
+  humidity.innerHTML = `${response.data.main.humidity}%`;
   const speed = document.querySelector(".speed");
-  speed.innerHTML = Math.round(response.data.wind.speed);
+  speed.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
   let image = document.querySelector("#icon");
   let icon = response.data.weather[0].icon;
   image.setAttribute("src", displayImage(icon));
@@ -105,20 +105,19 @@ function showWeather(response) {
   celsiusTemperature = Math.round(response.data.main.temp);
   const description = document.querySelector(".description");
   description.innerHTML = response.data.weather[0].main;
-  const humidity = document.querySelector(".humidity");
-  humidity.innerHTML = response.data.main.humidity;
+ const humidity = document.querySelector(".humidity");
+  humidity.innerHTML = `${response.data.main.humidity}%`;
   const speed = document.querySelector(".speed");
-  speed.innerHTML = Math.round(response.data.wind.speed);
+  speed.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
   let image = document.querySelector("#icon");
   let icon = response.data.weather[0].icon;
-  image.setAttribute("src", displayImage(icon));
-}
+  image.setAttribute("src", displayImage(icon));}
 function currentPosition(position) {
   let apiKey = "6d832849a381b4b67880dd123f70a4c7";
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
-  axios.get(url).then(changeCity);
+  axios.get(url).then(showWeather);
 }
 function getCurrentPosition() {
   event.preventDefault();
