@@ -76,9 +76,9 @@ h3 {
   left: 90px;
 }
 .temp {
-  position: relative;
-  left: 620px;
-  bottom: 220px;
+  position: fixed;
+  top: 428px;
+  right: 520px;
   font-size: 32px;
   color: #725d52;
   font-weight: bolder;
