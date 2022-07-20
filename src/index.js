@@ -37,7 +37,7 @@ dates.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}, ${currentYear}
 function displayImage(icon) {
   let iconPath = "";
   if (icon === `01d` || icon === "01n") {
-    iconPath = "img/clegarSky.svg";
+    iconPath = "img/clearSky.svg";
   } else if (icon === `02d` || icon === "02n") {
     iconPath = "img/fewClouds.svg";
   } else if (icon === `03d` || icon === `03n`) {
