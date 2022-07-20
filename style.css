@@ -99,3 +99,12 @@ h3 {
   text-align: center;
   text-shadow: 2px 2px 20px rgba(68, 62, 63, 0.089);
 }
+.temp .active {
+  color: #725d52;
+  cursor: default;
+  text-decoration: none;
+}
+
+.temp.active:hover {
+  text-decoration: none;
+}
