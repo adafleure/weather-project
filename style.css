@@ -108,3 +108,13 @@ h3 {
 .temp.active:hover {
   text-decoration: none;
 }
+#min {
+  color: grey;
+}
+#footer {
+  text-align: center;
+}
+#source {
+  text-decoration: none;
+  font-weight: bolder;
+}
